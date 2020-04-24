@@ -1,9 +1,11 @@
 const geoCode = require('./utils/geoCode.js')
 const foreCast = require('./utils/foreCast.js')
 const express = require('express')
-const app = express()
 const path = require('path')
 const hbs = require('hbs')
+
+const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 const publicPath = path.join(__dirname, "../public")
@@ -166,4 +168,4 @@ app.get('*', (req, res) =>
 )
 
 
-app.listen(3000, ()=> {console.log('Server is ON.')})
+app.listen(port, ()=> {console.log('Server is up on port ' + port)})
