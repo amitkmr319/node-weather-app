@@ -12,7 +12,7 @@ const foreCast = (latitude, longitude, callback) =>
             callback('Data  not fetched.', undefined);
         }
         else {
-            callback(undefined, `${body.current.weather_descriptions[0]}. Currently it is ${body.current.temperature} degrees in ${body.location.name}. Chance of rain is ${body.current.precip}%. The wind speed will be ${body.current.wind_speed} and humidity will be ${body.current.humidity}`)
+            callback(undefined, `${body.current.weather_descriptions[0]}. Currently it is ${body.current.temperature} degrees in ${body.location.name}. Chance of rain is ${body.current.precip}%. The wind speed will be ${body.current.wind_speed} and humidity will be ${body.current.humidity}%.`)
         }
     })
 }
